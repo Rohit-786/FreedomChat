@@ -10,3 +10,9 @@ const kErrorColor = Color(0xFFF03738);
 const kDefaultPadding = 20.0;
 const kPrimaryLightColor = Color(0xFFF1E6FF);
 const kPrimaryColor1 = Color(0xFF6F35A5);
+
+const kBackgoundColor = Color(0xFF091C40);
+const kSecondaryColor1 = Color(0xFF606060);
+const kRedColor = Color(0xFFFF1E46);
+const kTextColor = Color(0xFF202E2E);
+const kTextLigntColor = Color(0xFF7286A5);

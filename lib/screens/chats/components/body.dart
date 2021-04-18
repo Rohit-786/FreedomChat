@@ -1,6 +1,8 @@
 import 'package:chat/components/filled_outline_button.dart';
 import 'package:chat/constants.dart';
 import 'package:chat/models/Chat.dart';
+import 'package:chat/screens/dialScreen/dial_screen.dart';
+import 'package:chat/screens/groupCall/group_call_screen.dart';
 import 'package:chat/screens/messages/message_screen.dart';
 import 'package:flutter/material.dart';
 
@@ -20,8 +22,32 @@ class Body extends StatelessWidget {
               FillOutlineButton(press: () {}, text: "Recent Message"),
               SizedBox(width: kDefaultPadding),
               FillOutlineButton(
-                press: () {},
-                text: "Active",
+                press: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                      builder: (context) {
+                        return GroupCallScreen();
+                      },
+                    ),
+                  );
+                },
+                text: "Group Call",
+                isFilled: false,
+              ),
+              SizedBox(width: kDefaultPadding),
+              FillOutlineButton(
+                press: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                      builder: (context) {
+                        return DialScreen();
+                      },
+                    ),
+                  );
+                },
+                text: "Call",
                 isFilled: false,
               ),
             ],

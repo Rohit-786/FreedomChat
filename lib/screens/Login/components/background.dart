@@ -32,7 +32,6 @@ class Background extends StatelessWidget {
               width: size.width * 0.4,
             ),
           ),
-          child,
         ],
       ),
     );

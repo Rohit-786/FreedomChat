@@ -4,6 +4,7 @@ import 'package:flutter/material.dart';
 import 'components/body.dart';
 
 class MessagesScreen extends StatelessWidget {
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -38,9 +39,12 @@ class MessagesScreen extends StatelessWidget {
         ],
       ),
       actions: [
+        
         IconButton(
           icon: Icon(Icons.local_phone),
-          onPressed: () {},
+          onPressed: (){
+            
+          },
         ),
         IconButton(
           icon: Icon(Icons.videocam),

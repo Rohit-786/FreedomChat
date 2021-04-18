@@ -21,6 +21,15 @@ environment:
   sdk: ">=2.7.0 <3.0.0"
 
 dependencies:
+  firebase_auth: ^1.0.3
+  cloud_firestore: ^1.0.4
+  firebase: ^9.0.1
+  shared_preferences: ^2.0.5
+  firebase_core: ^1.0.3
+  google_sign_in: ^5.0.2
+  firebase_messaging: ^9.1.1
+  flutter_local_notifications: ^5.0.0+1
+  fluttertoast: ^8.0.4
   flutter:
     sdk: flutter
 
@@ -30,7 +39,7 @@ dependencies:
   flutter_svg: ^0.19.1
 
   # allows us to easily use any of the 977 fonts from fonts.google.com
-  google_fonts: ^1.1.2
+  google_fonts: ^2.0.0
 
 dev_dependencies:
   flutter_test:
