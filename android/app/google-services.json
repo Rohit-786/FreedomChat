@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "451695942975",
+    "project_id": "freedomchat-eb4ac",
+    "storage_bucket": "freedomchat-eb4ac.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:451695942975:android:b9d2b222077a95631d878a",
+        "android_client_info": {
+          "package_name": "com.example.chat"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "451695942975-pic269cp198oidagrh5p60357dn4p803.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAhm-7G7m2913iaCjUWwqMLygauxmAqp-I"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "451695942975-pic269cp198oidagrh5p60357dn4p803.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
