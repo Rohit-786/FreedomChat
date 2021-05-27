@@ -11,7 +11,6 @@ import 'package:flutter/material.dart';
 
 
 import '../../constants.dart';
-import '../../enums.dart';
 
 class ChatRoom extends StatefulWidget {
   @override
@@ -30,7 +29,10 @@ class _ChatRoomState extends State<ChatRoom> {
         actions: [
           IconButton(
             icon: Icon(Icons.search),
-            onPressed: () {},
+            onPressed: () {
+              Navigator.push(
+              context, MaterialPageRoute(builder: (context) => Search()));
+            },
           ),
         ],
       ),
@@ -45,7 +47,7 @@ class _ChatRoomState extends State<ChatRoom> {
           color: Colors.white,
         ),
       ),
-      bottomNavigationBar: CustomBottomNavBar(selectedMenu: MenuState.Profile),
+      //bottomNavigationBar: CustomBottomNavBar(selectedMenu: MenuState.Profile),
       body: StreamBuilder(
         stream: chatRooms,
         builder: (context, snapshot) {

@@ -1,3 +1,4 @@
+import 'package:chat/screens/chats/mainscreen.dart';
 import 'package:chat/screens/signinOrSignUp/signin_or_signup_screen.dart';
 import 'package:chat/screens/welcome/welcome_screen.dart';
 import 'package:chat/theme.dart';
@@ -5,7 +6,6 @@ import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 
 import 'helper/helperfunctions.dart';
-import 'screens/chats/chats_screen.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
@@ -45,7 +45,7 @@ class _MyAppState extends State<MyApp> {
       //home: WelcomeScreen(),
       home: userIsLoggedIn != null
           ? userIsLoggedIn
-              ? ChatRoom()
+              ? MainScreen()
               : SigninOrSignupScreen()
           : WelcomeScreen()
     );

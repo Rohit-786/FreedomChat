@@ -4,7 +4,7 @@ import 'package:chat/components/text_field_container.dart';
 import 'package:chat/helper/helperfunctions.dart';
 import 'package:chat/screens/Signup/components/background.dart';
 import 'package:chat/screens/Signup/signup_screen.dart';
-import 'package:chat/screens/chats/chats_screen.dart';
+import 'package:chat/screens/chats/mainscreen.dart';
 import 'package:chat/services/auth.dart';
 import 'package:chat/services/database.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
@@ -52,7 +52,7 @@ class _SignInScreenState extends State<SignInScreen> {
               userInfoSnapshot.docs[0].data()["userEmail"]);
 
           Navigator.pushReplacement(
-              context, MaterialPageRoute(builder: (context) => ChatRoom()));
+              context, MaterialPageRoute(builder: (context) => MainScreen()));
         } else {
           setState(() {
             isLoading = false;

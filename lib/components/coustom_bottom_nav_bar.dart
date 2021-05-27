@@ -19,7 +19,7 @@ class CustomBottomNavBar extends StatelessWidget {
   Widget build(BuildContext context) {
     final Color inActiveIconColor = Color(0xFF00BF6D);
     return Container(
-      padding: EdgeInsets.symmetric(vertical: 14),
+      padding: EdgeInsets.symmetric(vertical:3),
       decoration: BoxDecoration(
         color: Colors.white,
         boxShadow: [
@@ -39,51 +39,67 @@ class CustomBottomNavBar extends StatelessWidget {
           child: Row(
             mainAxisAlignment: MainAxisAlignment.spaceAround,
             children: [
+              Column(
+                mainAxisSize: MainAxisSize.min,
+                children: [
+                  IconButton(
+                      icon: Icon(Icons.messenger),
+                      color: MenuState.Chats == selectedMenu
+                          ? kPrimaryColor
+                          : inActiveIconColor,
+                      onPressed: () {
+                        Navigator.pushReplacement(
+                          context,
+                          MaterialPageRoute(
+                            builder: (context) {
+                              return ChatRoom();
+                            },
+                          ),
+                        );
+                      }),
+                  new Text(
+                    'Chats',
+                    style: TextStyle(
+                      color: Colors.blue,
+                    ),
+                  )
+                ],
+              ),
               IconButton(
-                  icon: SvgPicture.asset(
-                    "assets/icons/Chat bubble Icon.svg",
-                    color: MenuState.Chats == selectedMenu
-                        ? kPrimaryColor
-                        : inActiveIconColor,
-                  ),
-                  onPressed: () {
-                    Navigator.pushReplacement(
-                      context,
-                      MaterialPageRoute(
-                        builder: (context) {
-                          return ChatRoom();
-                        },
-                      ),
-                    );
-                  }),
-              IconButton(
-                icon: SvgPicture.asset("assets/icons/Heart Icon.svg",color: MenuState.People == selectedMenu
-                    ? kPrimaryColor
-                    : inActiveIconColor,),
+                icon: SvgPicture.asset(
+                  "assets/icons/Heart Icon.svg",
+                  color: MenuState.People == selectedMenu
+                      ? kPrimaryColor
+                      : inActiveIconColor,
+                ),
                 onPressed: () {},
               ),
               IconButton(
-              icon: SvgPicture.asset("assets/icons/Call.svg",color: MenuState.Call == selectedMenu
-                    ? kPrimaryColor
-                    : inActiveIconColor,),
+                icon: SvgPicture.asset(
+                  "assets/icons/Call.svg",
+                  color: MenuState.Call == selectedMenu
+                      ? kPrimaryColor
+                      : inActiveIconColor,
+                ),
                 onPressed: () {
                   Navigator.pushReplacement(
-                      context,
-                      MaterialPageRoute(
-                        builder: (context) {
-                          return AudioCallWithImage();
-                        },
-                      ),
-                    );
+                    context,
+                    MaterialPageRoute(
+                      builder: (context) {
+                        return AudioCallWithImage();
+                      },
+                    ),
+                  );
                 },
               ),
               IconButton(
-                  icon: SvgPicture.asset(
-                    "assets/icons/User Icon.svg",
-                    color: MenuState.Profile == selectedMenu
-                        ? kPrimaryColor
-                        : inActiveIconColor,
+                  icon: CircleAvatar(
+                    radius: 14,
+                    backgroundImage: AssetImage("assets/images/user_2.png"),
                   ),
+                  color: MenuState.Profile == selectedMenu
+                      ? kPrimaryColor
+                      : inActiveIconColor,
                   onPressed: () {
                     Navigator.pushReplacement(
                       context,

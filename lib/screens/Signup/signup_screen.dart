@@ -4,6 +4,7 @@ import 'package:chat/components/text_field_container.dart';
 import 'package:chat/helper/helperfunctions.dart';
 import 'package:chat/screens/Login/login_screen.dart';
 import 'package:chat/screens/chats/chats_screen.dart';
+import 'package:chat/screens/chats/mainscreen.dart';
 import 'package:chat/services/auth.dart';
 import 'package:chat/services/database.dart';
 import 'package:chat/services/google_auth.dart';
@@ -58,7 +59,7 @@ class _SignUpScreenState extends State<SignUpScreen> {
               HelperFunctions.saveUserEmailSharedPreference(emailEditingController.text);
 
               Navigator.pushReplacement(context, MaterialPageRoute(
-                  builder: (context) => ChatRoom()
+                  builder: (context) => MainScreen()
               ));
             }
       });
